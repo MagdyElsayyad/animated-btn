@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", function () {
       setTimeout(() => {
         road.classList.remove("show");
         text.classList.remove("hide");
-        text.textContent = "Order on way to you 😊";
+        text.textContent = "Order on the way to you 😊";
         text.classList.add("show");
         btn.setAttribute("disabled", true)
       }, 500);
