@@ -2,14 +2,24 @@ html, body{
     padding: 0;
     margin: 0;
 }
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500&display=swap');
 
 body {
+    font-family: 'Geologica', sans-serif;
     min-height: 100vh;
-    display: flex;
+    display: grid;
+    grid-template-rows: 1fr auto;
     justify-content: center;
     align-items: center;
 }
+.me{
+    text-align: center;
+    padding: 15px 0;
+}
 
+.me a{
+    color: #0f13db;
+}
 .hide{
     opacity: 0 !important;
 }
