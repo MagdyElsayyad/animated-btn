@@ -18,6 +18,7 @@ body {
 }
 
 .btn{
+    box-shadow: 0px 0 30px 7px #686868;
     overflow: hidden;
     position: relative;
     display: block;
@@ -51,8 +52,8 @@ body {
     -o-transition: all .5s;
 }
 .car.back{
-    animation: car-back 1s .1s ease-out  forwards;
-    -webkit-animation: car-back 1s .1s ease-out  forwards;
+    animation: car-back 2s .1s ease-out  forwards;
+    -webkit-animation: car-back 2s .1s ease-out  forwards;
 }
 
 .car.walk{
@@ -79,7 +80,8 @@ body {
 }
 
 .box.put{
-    animation: box-in-car .1s  linear 1s  forwards;
+    animation: box-in-car .1s  linear 2s  forwards;
+    -webkit-animation: box-in-car .1s  linear 2s  forwards;
 }
 
 
