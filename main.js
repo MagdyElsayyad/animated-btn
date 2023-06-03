@@ -21,6 +21,7 @@ window.addEventListener("DOMContentLoaded", function () {
       exitSound.play();
 
       car.classList.add("walk");
+    
     }, 2000);
     setTimeout(() => {
       car.classList.add("exit");

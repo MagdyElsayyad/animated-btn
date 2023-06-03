@@ -89,16 +89,24 @@ body {
     opacity: 0;
     transition: opacity .4s;
     position: absolute;
+    left: -5%;
     bottom: 13px;
-    width: 100%;
+    width: 150%;
     display: block;
-    border-bottom:3px dashed #fff;
-    animation: road 1s linear infinite backwards ;
-    -webkit-animation: road 1s linear infinite backwards ;
+    border-bottom: 2px dashed #fff;
     -webkit-transition: opacity .4s;
     -moz-transition: opacity .4s;
     -ms-transition: opacity .4s;
     -o-transition: opacity .4s;
+}
+
+.road.back{
+    animation: road 1s linear infinite alternate-reverse  ;
+    -webkit-animation: road 1s linear infinite alternate-reverse  ;
+}
+.road.exit{
+    animation: road 1s linear infinite backwards ;
+    -webkit-animation: road 1s linear infinite backwards ;
 }
 
 .car.exit
