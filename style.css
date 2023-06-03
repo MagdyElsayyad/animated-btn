@@ -1,0 +1,211 @@
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide{
+    opacity: 0 !important;
+}
+.show{
+    opacity: 1 !important;
+}
+
+.btn{
+    overflow: hidden;
+    position: relative;
+    display: block;
+    border-radius:40px;
+    cursor: pointer;
+    min-width: 300px;
+    box-sizing: border-box;
+    font-size: 20px;
+    padding: 25px 20px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+}
+
+.btn .text{
+    transition: opacity .5s;
+}
+.car{
+    opacity: 0;
+    position: absolute;
+    right: -15%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 40px;
+    width: auto;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+.car.back{
+    animation: car-back 1s .1s ease-out  forwards;
+    -webkit-animation: car-back 1s .1s ease-out  forwards;
+}
+
+.car.walk{
+    animation: walk 1s linear forwards infinite;
+    -webkit-animation: walk 1s linear forwards infinite;
+}
+
+
+
+.box{
+    opacity: 0;
+    position: absolute;
+    right:85%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 25px;
+    width: auto;
+    transition: opacity .5s;
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s;
+    -o-transition: opacity .5s;
+}
+
+.box.put{
+    animation: box-in-car .1s  linear 1s  forwards;
+}
+
+
+.road{
+    opacity: 0;
+    transition: opacity .4s;
+    position: absolute;
+    bottom: 13px;
+    width: 100%;
+    display: block;
+    border-bottom:3px dashed #fff;
+    animation: road 1s linear infinite backwards ;
+    -webkit-animation: road 1s linear infinite backwards ;
+    -webkit-transition: opacity .4s;
+    -moz-transition: opacity .4s;
+    -ms-transition: opacity .4s;
+    -o-transition: opacity .4s;
+}
+
+.car.exit
+{
+    animation: car-exit 2s linear forwards ;
+    -webkit-animation: car-exit 2s linear forwards ;
+}
+.box.exit
+{
+    animation: box-exit 1.75s linear forwards ;
+    -webkit-animation: box-exit 1.48s linear forwards ;
+}
+@keyframes road{
+    0%{
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+}
+    100%{
+        transform: translateX(-10%);
+        -webkit-transform: translateX(-10%);
+        -moz-transform: translateX(-10%);
+        -ms-transform: translateX(-10%);
+        -o-transform: translateX(-10%);
+}
+}
+@keyframes car-back{
+    0%{
+        right: 15px;
+    }
+    100%{
+        
+       right: 60%;
+    }
+}
+@keyframes car-exit{
+  
+    0%{
+        right: 60%;
+       transform: translateX(0px) ;
+       -webkit-transform: translateX(0px) ;
+       -moz-transform: translateX(0px) ;
+       -ms-transform: translateX(0px) ;
+       -o-transform: translateX(0px) ;
+}
+    100%{
+        right: 10%;
+        transform: translateX(600px) ;
+        -webkit-transform: translateX(600px) ;
+        -moz-transform: translateX(600px) ;
+        -ms-transform: translateX(600px) ;
+        -o-transform: translateX(600px) ;
+}
+}
+@keyframes box-exit{
+  
+    0%{
+        transform: translate(50px, -10px) ;
+        -webkit-transform: translate(50px, -10px) ;
+        -moz-transform: translate(50px, -10px) ;
+        -ms-transform: translate(50px, -10px) ;
+        -o-transform: translate(50px, -10px) ;
+}
+     100%{
+         transform: translate(600px, -10px) ;
+         -webkit-transform: translate(600px, -10px) ;
+         -moz-transform: translate(600px, -10px) ;
+         -ms-transform: translate(600px, -10px) ;
+         -o-transform: translate(600px, -10px) ;
+}
+}
+
+@keyframes box-in-car{
+    0%{
+        transform: translate(0, -3px ), rotate(45deg);
+    }
+    30%{
+        transform: translate(10px, -6px ), rotate(45deg);
+    }
+    70%{
+        transform: translate(20px, -10px ), rotate(45deg);
+    }
+    100%{
+        transform: translate(50px, -10px);
+        -webkit-transform: translate(50px, -10px);
+        -moz-transform: translate(50px, -10px);
+        -ms-transform: translate(50px, -10px);
+        -o-transform: translate(50px, -10px);
+}
+}
+@keyframes walk{
+    0%{
+        right: 60%;
+        transform:  translateY(-1px);
+    }
+    10%{
+        right: 60%;
+        transform:  translateY(0);
+    }
+
+    80%{
+        right: 60%;
+        transform: translateY(-2px) ;
+    }
+    100%{
+        right: 60%;
+        transform: translateY(0) ;
+    }
+}
+
